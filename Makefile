@@ -98,12 +98,6 @@ all : $(NAME)
 .create.build :
 	$(CREATE_DIR)
 
-.test.lol :
-	for i in {1..20}; do \
-		echo -ne "\r${BAR:0:$i}" \
-		sleep .1 \
-	done
-
 $(NAME) : $(OBJS)
 	$(AR) $(ARFLAG) $(NAME) $(OBJS)
 	@echo "\e[1A\e[0J\e[32;1m\r$(NAME) created !\e[0m"
