@@ -1,27 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   libft_struct.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 19:54:23 by misimon           #+#    #+#             */
-/*   Updated: 2022/11/07 18:32:51 by misimon          ###   ########.fr       */
+/*   Created: 2022/11/07 18:35:18 by misimon           #+#    #+#             */
+/*   Updated: 2022/11/09 14:36:37 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft.h"
+#ifndef LIBFT_STRUCT_H
+# define LIBFT_STRUCT_H
 
-char	*ft_strtrim(char const *s1, char const *set)
+# include "../libft.h"
+
+typedef int	t_bool;
+
+# ifndef TRUE
+#  define TRUE 1
+# endif
+
+# ifndef FALSE
+#  define FALSE 0
+# endif
+
+typedef struct s_node
 {
-	int	i;
+	void			*content;
+	struct s_node	*next;
+	struct s_node	*prev;
+}	t_node;
 
-	if (!(s1) || !(set))
-		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	i = ft_strlen(s1);
-	while (i && ft_strchr(set, s1[i]))
-		i--;
-	return (ft_substr(s1, 0, i + 1));
-}
+typedef struct s_list
+{
+	size_t	size;
+	t_node	*head;
+	t_node	*tail;
+}	t_list;
+
+#endif

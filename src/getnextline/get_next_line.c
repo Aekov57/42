@@ -6,11 +6,11 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 14:11:22 by misimon           #+#    #+#             */
-/*   Updated: 2022/10/19 03:43:40 by misimon          ###   ########.fr       */
+/*   Updated: 2022/11/09 14:39:47 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../libft.h"
 
 char	*get_next_line(int fd)
 {
@@ -24,6 +24,8 @@ char	*get_next_line(int fd)
 	if (fd <= -1 || fd > 1023 || verif <= 0)
 		return (NULL);
 	str = malloc(1);
+	if (!str)
+		return (NULL);
 	str[0] = '\0';
 	while (verif == 1 && buffer[0] != '\n')
 	{

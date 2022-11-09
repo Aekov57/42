@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 15:44:18 by misimon           #+#    #+#             */
-/*   Updated: 2022/10/19 02:36:36 by misimon          ###   ########.fr       */
+/*   Created: 2022/10/19 03:32:27 by misimon           #+#    #+#             */
+/*   Updated: 2022/11/09 14:47:12 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../libft.h"
 
-int	ft_isprint(int c)
+t_bool	ft_issign(char c)
 {
-	if (c >= ' ' && c <= '~')
-		return (1);
-	return (0);
+	if (c == '+' || c == '-')
+		return (TRUE);
+	return (FALSE);
 }

@@ -6,11 +6,11 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/11 17:19:53 by misimon           #+#    #+#             */
-/*   Updated: 2022/10/19 05:23:52 by misimon          ###   ########.fr       */
+/*   Updated: 2022/11/09 14:38:20 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../libft.h"
 
 char	*ft_strfjoin(char *s1, char *s2)
 {

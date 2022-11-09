@@ -6,11 +6,11 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 03:54:51 by misimon           #+#    #+#             */
-/*   Updated: 2022/10/19 05:23:27 by misimon          ###   ########.fr       */
+/*   Updated: 2022/11/07 18:32:51 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

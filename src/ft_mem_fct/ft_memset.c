@@ -6,11 +6,11 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 16:05:20 by misimon           #+#    #+#             */
-/*   Updated: 2022/10/19 02:36:36 by misimon          ###   ########.fr       */
+/*   Updated: 2022/11/07 18:32:51 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

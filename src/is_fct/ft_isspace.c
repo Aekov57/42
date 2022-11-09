@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 14:16:43 by misimon           #+#    #+#             */
-/*   Updated: 2022/10/19 02:36:36 by misimon          ###   ########.fr       */
+/*   Created: 2022/11/09 14:53:09 by misimon           #+#    #+#             */
+/*   Updated: 2022/11/09 15:00:39 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/libft.h"
+#include "../../libft.h"
 
-int	ft_isalpha(int c)
+t_bool	ft_isspace(int c)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	if (c == '\t' || c == '\n' || c == '\f' || c == '\r' || c == ' ')
+		return (TRUE);
+	return (FALSE);
 }

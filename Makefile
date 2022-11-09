@@ -6,7 +6,7 @@
 #    By: misimon <misimon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/19 00:55:09 by misimon           #+#    #+#              #
-#    Updated: 2022/10/19 05:25:56 by misimon          ###   ########.fr        #
+#    Updated: 2022/11/09 15:01:19 by misimon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,13 @@ NAME	:= 	libft.a
 #	FILE :
 SRC_DIR	:= 	src
 
-SRCS	:=	ft_is_fct/ft_isalpha.c		\
-			ft_is_fct/ft_isdigit.c		\
-			ft_is_fct/ft_isprint.c		\
-			ft_is_fct/ft_isascii.c		\
-			ft_is_fct/ft_isalnum.c		\
+SRCS	:=	is_fct/ft_isalpha.c			\
+			is_fct/ft_isdigit.c			\
+			is_fct/ft_isprint.c			\
+			is_fct/ft_isascii.c			\
+			is_fct/ft_isalnum.c			\
+			is_fct/ft_issign.c			\
+			is_fct/ft_isspace.c			\
 										\
 			ft_printf/ft_printf_hex.c	\
 			ft_printf/ft_printf_other.c	\
@@ -100,12 +102,12 @@ all : $(NAME)
 
 $(NAME) : $(OBJS)
 	$(AR) $(ARFLAG) $(NAME) $(OBJS)
-	@echo "\e[1A\e[0J\e[32;1m\r$(NAME) created !\e[0m"
+	@echo "\033[1A\033[0J\033[32;1m\r$(NAME) created !\033[0m"
 
 $(OBJS_DIR)/%.o : $(SRC_DIR)/%.c
 	$(DUP_DIR)
 	$(CC) $(CFLAGS) -c -o $@ $<
-	@echo "\e[1A\e[0J\e[32;1m\rLibft compilation >>\e[0m\e[30;1m $@\e[0m"
+	@echo "\033[1A\033[0J\033[32;1m\rLibft compilation >>\033[0m\033[30;1m $@\033[0m"
 
 clean : 
 	$(RM) $(OBJS_DIR)

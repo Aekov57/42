@@ -6,7 +6,7 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 13:57:30 by misimon           #+#    #+#             */
-/*   Updated: 2022/10/19 05:28:27 by misimon          ###   ########.fr       */
+/*   Updated: 2022/11/09 15:01:05 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,15 @@
 # include <stdarg.h>
 # include <fcntl.h>
 # include <limits.h>
+# include "include/libft_struct.h"
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_issign(char c);
+t_bool	ft_isalpha(int c);
+t_bool	ft_isdigit(int c);
+t_bool	ft_isalnum(int c);
+t_bool	ft_isascii(int c);
+t_bool	ft_isprint(int c);
+t_bool	ft_issign(char c);
+t_bool	ft_ispace(char c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_error(void);
@@ -78,3 +80,20 @@ char	*get_next_line(int fd);
 char	*ft_strfjoin(char *s1, char *s2);
 
 #endif
+
+/*
+static void	*xmalloc(size_t size)
+{
+	static int	mal = 1;
+	static int	i = 0;
+
+	++i;
+	if (i == mal)
+	{
+		printf("malloc %d crashed\n", i);
+		return (NULL);
+	}
+	return (malloc(size));
+}
+
+#define malloc(x) xmalloc(x)*/
