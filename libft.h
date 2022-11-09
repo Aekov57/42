@@ -6,7 +6,7 @@
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 13:57:30 by misimon           #+#    #+#             */
-/*   Updated: 2022/11/09 15:01:05 by misimon          ###   ########.fr       */
+/*   Updated: 2022/11/09 15:56:57 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,14 @@ int		ft_printf(const char *str, ...);
 
 char	*get_next_line(int fd);
 char	*ft_strfjoin(char *s1, char *s2);
+
+t_list	*create_list(void);
+void	delete_all_list(t_list *ptr);
+void	clear_list(t_list *ptr);
+void	delete_last(t_list *ptr);
+void	delete_first(t_list *ptr);
+void	add_tail(t_list *ptr, void *data);
+void	add_head(t_list *ptr, void *data);
 
 #endif
 

@@ -1,42 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft_struct.h                                     :+:      :+:    :+:   */
+/*   create_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: misimon <misimon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 18:35:18 by misimon           #+#    #+#             */
-/*   Updated: 2022/11/09 15:40:27 by misimon          ###   ########.fr       */
+/*   Created: 2022/11/09 15:35:15 by misimon           #+#    #+#             */
+/*   Updated: 2022/11/09 15:49:19 by misimon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_STRUCT_H
-# define LIBFT_STRUCT_H
+#include "../../libft.h"
 
-# include "../libft.h"
-
-typedef int	t_bool;
-
-# ifndef TRUE
-#  define TRUE 1
-# endif
-
-# ifndef FALSE
-#  define FALSE 0
-# endif
-
-typedef struct s_node
+t_list	*create_list(void)
 {
-	void			*content;
-	struct s_node	*next;
-	struct s_node	*prev;
-}	t_node;
+	t_list	*ptr;
 
-typedef struct s_list
-{
-	size_t	size;
-	t_node	*head;
-	t_node	*tail;
-}	t_list;
-
-#endif
+	ptr = malloc(sizeof(t_list));
+	if (!ptr)
+		return (NULL);
+	ptr->head = NULL;
+	ptr->tail = NULL;
+	ptr->size = 0;
+	return (ptr);
+}
